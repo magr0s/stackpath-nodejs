@@ -5,5 +5,8 @@
   "main": "src/index.js",
   "author": "Oleksandr Krokhmalnyi <magr0s.ak@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "node-fetch-npm": "^2.0.4"
+  }
 }
