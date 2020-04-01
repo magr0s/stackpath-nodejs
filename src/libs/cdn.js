@@ -16,7 +16,6 @@ class CDNStackpath extends Stackpath {
     }
 
     return this.fetch(`cdn/v1/stacks/${stackId}/sites/${siteId}/certificates/request`, options)
-      .then(result => (console.log(JSON.stringify(result))))
   }
 
   getScopes (stackId, siteId) {
