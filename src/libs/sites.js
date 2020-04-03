@@ -8,7 +8,6 @@ class SitesStackpath extends Stackpath {
     }
 
     return this.fetch(`delivery/v1/stacks/${stackId}/sites`, options)
-      .then(({ site }) => (site))
   }
 }
 

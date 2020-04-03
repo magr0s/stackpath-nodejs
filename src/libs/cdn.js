@@ -7,7 +7,6 @@ class CDNStackpath extends Stackpath {
     }
 
     return this.fetch(`cdn/v1/stacks/${stackId}/sites/${siteId}/dns/targets`, options)
-      .then(({ addresses }) => (addresses))
   }
 
   sslRequest (stackId, siteId) {
@@ -24,7 +23,6 @@ class CDNStackpath extends Stackpath {
     }
 
     return this.fetch(`cdn/v1/stacks/${stackId}/sites/${siteId}/scopes`, options)
-      .then(({ results }) => (results))
   }
 
   addRule (stackId, siteId, scopeId, params) {

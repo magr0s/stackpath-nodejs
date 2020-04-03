@@ -7,7 +7,6 @@ class StacksStackpath extends Stackpath {
     }
 
     return this.fetch('stack/v1/stacks', options)
-      .then(({ results }) => (results))
   }
 }
 
