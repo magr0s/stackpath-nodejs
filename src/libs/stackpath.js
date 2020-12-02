@@ -2,7 +2,7 @@ const fetch = require('node-fetch-npm')
 const { API_URL } = require('../configs/api.json')
 
 class Stackpath {
-  constructor (credentials) {
+  constructor(credentials) {
     this.credentials = credentials
   }
 
@@ -35,19 +35,20 @@ class Stackpath {
   async _auth () {
     const api = this._makeURL('identity/v1/oauth2/token')
 
-    const credentials = Object.assign({
-      grant_type: 'client_credentials'
-    }, this.credentials)
+    const credentials = Object.assign({ grant_type: 'client_credentials' }, this.credentials);
 
     const options = {
       method: 'POST',
       body: JSON.stringify(credentials)
     }
 
-    const { access_token: accessToken } = await fetch(api, options)
-      .then(response => (response.json()))
+    const response = await fetch(api, options);
 
-    this.accessToken = accessToken
+    const {
+      access_token: accessToken
+    } = await response.json();
+
+    this.accessToken = accessToken;
   }
 }
 
