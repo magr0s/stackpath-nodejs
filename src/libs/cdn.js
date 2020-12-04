@@ -9,9 +9,10 @@ class CDNStackpath extends Stackpath {
     return this.fetch(`cdn/v1/stacks/${stackId}/sites/${siteId}/dns/targets`, options)
   }
 
-  sslRequest (stackId, siteId) {
+  certificatesRequest (stackId, siteId, params) {
     const options = {
-      method: 'POST'
+      method: 'POST',
+      body: JSON.stringify(params)
     }
 
     return this.fetch(`cdn/v1/stacks/${stackId}/sites/${siteId}/certificates/request`, options)
