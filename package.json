@@ -1,6 +1,6 @@
 {
   "name": "stackpath-nodejs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "StackPath API",
   "main": "src/index.js",
   "author": "Oleksandr Krokhmalnyi <magr0s.ak@gmail.com>",
