@@ -6,7 +6,7 @@ class Stackpath {
     this.credentials = credentials
   }
 
-  async fetch (endpoint, options) {
+  async fetch (endpoint, options = {}) {
     try {
       await this._auth()
 

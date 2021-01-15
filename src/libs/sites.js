@@ -45,7 +45,7 @@ class SitesStackpath extends Stackpath {
       method: 'DELETE'
     }
 
-    return this.fetch(`delivery/v1/stacks/${stackId}/sites/${siteId}`)
+    return this.fetch(`delivery/v1/stacks/${stackId}/sites/${siteId}`, options)
   }
 }
 
